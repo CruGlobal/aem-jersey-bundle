@@ -1,0 +1,109 @@
+# gitignore #
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse Core
+.project
+.settings
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java annotation processor (APT)
+.factorypath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# macOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Compiled source #
+###################
+*.class
+*.dll
+*.exe
+
+# IntelliJ files #
+##################
+*.iml
+*.idea
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+/.idea/*
+!/.idea/codeStyleSettings.xml
+
+# Vault files #
+*.vlt
+
+*.git
+
+# Miscellaneous files #
+#######################
+*.log
+nb*.xml
+bundle/target/
+content/target/
+Thumbs.db
+*.settings
+*.classpath
+libs
+/libs
+-d
+.brackets.json
+
+# Web project files generated in NetBeans
+nbproject/private/
+.checkstyle
+*/target/
+
+# Package Files #
+#################
+target
+lib/
+classes/
+
+# PMD Rules#
+.pmd
+.pmdruleset.xml
+
+# version backups #
+*.versionsBackup
