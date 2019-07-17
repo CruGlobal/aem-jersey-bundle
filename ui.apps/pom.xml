@@ -59,8 +59,8 @@
           <group>jersey-bundle</group>
           <embeddeds>
             <embedded>
-              <groupId>org.glassfish.jersey.core</groupId>
-              <artifactId>jersey-client</artifactId>
+              <groupId>org.cru</groupId>
+              <artifactId>jersey-bundle.core</artifactId>
               <target>/apps/jersey-bundle/install</target>
             </embedded>
           </embeddeds>
@@ -82,11 +82,10 @@
   <!-- D E P E N D E N C I E S                                                -->
   <!-- ====================================================================== -->
   <dependencies>
-
     <dependency>
-      <groupId>org.glassfish.jersey.core</groupId>
-      <artifactId>jersey-client</artifactId>
-      <version>2.25.1</version>
+      <groupId>org.cru</groupId>
+      <artifactId>jersey-bundle.core</artifactId>
+      <version>${project.version}</version>
     </dependency>
 
   </dependencies>
