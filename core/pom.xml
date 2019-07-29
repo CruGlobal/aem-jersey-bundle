@@ -26,7 +26,19 @@
                         <Bundle-SymbolicName>cru-jersey-bundle</Bundle-SymbolicName>
                         <Bundle-Description>This bundle wraps the aopalliance dependency</Bundle-Description>
                         <Import-Package>
-                            <!-- Nothing -->
+                            javax.net.ssl;version=0.0.0,
+                            javax.xml.namespace;version=0.0.0,
+                            javax.xml.parsers;version=0.0.0,
+                            javax.xml.stream;version=1.0.0,
+                            javax.xml.transform;version=0.0.0,
+                            javax.xml.transform.dom;version=0.0.0,
+                            javax.xml.transform.sax;version=0.0.0,
+                            javax.xml.transform.stream;version=0.0.0,
+                            javax.activation,
+                            org.w3c.dom,
+                            org.xml.sax,
+                            org.xml.sax.ext,
+                            org.xml.sax.helpers
                         </Import-Package>
                         <Export-Package>
                             org.aopalliance.intercept,
