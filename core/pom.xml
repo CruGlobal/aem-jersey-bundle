@@ -41,8 +41,6 @@
                             org.xml.sax.helpers
                         </Import-Package>
                         <Export-Package>
-                            org.aopalliance.intercept,
-                            org.aopalliance.aop,
                             javax.ws.rs,
                             javax.ws.rs.client,
                             javax.ws.rs.core,
@@ -98,11 +96,6 @@
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>aopalliance</groupId>
-            <artifactId>aopalliance</artifactId>
         </dependency>
     </dependencies>
     
