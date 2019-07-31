@@ -24,7 +24,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>cru-jersey-bundle</Bundle-SymbolicName>
-                        <Bundle-Description>This bundle wraps the aopalliance dependency</Bundle-Description>
+                        <Bundle-Description>This bundle wraps the jersey dependencies</Bundle-Description>
                         <Import-Package>
                             javax.net.ssl;version=0.0.0,
                             javax.xml.namespace;version=0.0.0,
