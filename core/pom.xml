@@ -44,7 +44,11 @@
                             javax.ws.rs,
                             javax.ws.rs.client,
                             javax.ws.rs.core,
-                            javax.ws.rs.ext
+                            javax.ws.rs.ext,
+                            org.glassfish.jersey.client,
+                            org.glassfish.jersey.client.authentication,
+                            org.glassfish.jersey.client.filter,
+                            org.glassfish.jersey.client.spi
                         </Export-Package>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
