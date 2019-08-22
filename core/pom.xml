@@ -34,6 +34,7 @@
                             javax.xml.transform.dom;version=0.0.0,
                             javax.xml.transform.sax;version=0.0.0,
                             javax.xml.transform.stream;version=0.0.0,
+                            javax.xml.bind;version=0.0.0,
                             javax.activation,
                             org.w3c.dom,
                             org.xml.sax,
@@ -73,6 +74,11 @@
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
         </dependency>
 
         <!-- HK2 Dependencies -->

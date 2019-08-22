@@ -489,6 +489,12 @@
         <version>${jersey.version}</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-server</artifactId>
+        <version>${jersey.version}</version>
+      </dependency>
+
       <!-- HK2 Dependencies -->
       <dependency>
         <groupId>org.glassfish.hk2</groupId>
