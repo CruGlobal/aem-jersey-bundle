@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.cru</groupId>
         <artifactId>jersey-bundle</artifactId>
-        <version>1.2</version>
+        <version>1.2.1</version>
     </parent>
 
     <artifactId>jersey-bundle.core</artifactId>
@@ -34,6 +34,7 @@
                             javax.xml.transform.dom;version=0.0.0,
                             javax.xml.transform.sax;version=0.0.0,
                             javax.xml.transform.stream;version=0.0.0,
+                            javax.xml.bind;version=0.0.0,
                             javax.activation,
                             org.w3c.dom,
                             org.xml.sax,
@@ -44,7 +45,11 @@
                             javax.ws.rs,
                             javax.ws.rs.client,
                             javax.ws.rs.core,
-                            javax.ws.rs.ext
+                            javax.ws.rs.ext,
+                            org.glassfish.jersey.client,
+                            org.glassfish.jersey.client.authentication,
+                            org.glassfish.jersey.client.filter,
+                            org.glassfish.jersey.client.spi
                         </Export-Package>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
@@ -69,6 +74,11 @@
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
         </dependency>
 
         <!-- HK2 Dependencies -->
