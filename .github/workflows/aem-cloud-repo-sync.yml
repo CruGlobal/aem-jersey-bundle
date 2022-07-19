@@ -2,11 +2,11 @@ name: AEM Cloud Repository Sync
 
 on:
   push:
-    branches: [ main, develop, aem-cloud-repo-sync ]
+    branches: [ main, develop, aem-cloud-repo-sync, aem-cloud-repo-sync-v2 ]
 
 jobs:
   aem-cloud-repo-sync:
-    uses: CruGlobal/.github/.github/workflows/aem-cloud-repo-sync.yml@v1
+    uses: ./.github/workflows/aem-cloud-repo-sync-core.yml
     with:
         cloud-repository-name: jersey
         aem-cloud-branch-name: ${{ github.ref_name }}
