@@ -51,7 +51,9 @@
                             org.glassfish.jersey.client.filter,
                             org.glassfish.jersey.client.spi,
                             org.glassfish.hk2.*,
-                            org.jvnet.hk2.component
+                            org.jvnet.hk2.component,
+                            jersey.repackaged.com.google.common.base,
+                            jersey.repackaged.com.google.common.collect,
                         </Export-Package>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
