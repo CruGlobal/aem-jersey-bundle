@@ -2,7 +2,7 @@ name: AEM Cloud Repository Sync
 
 on:
   push:
-    branches: [ main, develop, aem-cloud-repo-sync ]
+    branches: [ main, stage, develop, aem-cloud-repo-sync ]
 
 jobs:
   aem-cloud-repo-sync:
