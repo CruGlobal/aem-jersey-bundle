@@ -1,0 +1,46 @@
+name: Verify bundle contract
+
+# The README requires tools/verify.sh to pass on both JDK 11 and JDK 21 before
+# merging. This job is what makes that a gate rather than a convention: without
+# it nothing checks the OSGi contract, the embedded jar set, or the runtime
+# behaviour of the bundle on either JDK.
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 11 is what Cloud Manager builds with today (.cloudmanager/java-version
+        # in the aem-cloud repo); 21 is what this bundle is being made ready for.
+        jdk: [ '11', '21' ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.jdk }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.jdk }}
+          distribution: 'temurin'
+          overwrite-settings: false
+          cache: 'maven'
+
+      - name: Verify bundle on JDK ${{ matrix.jdk }}
+        env:
+          AEM_CLOUD_ARTIFACTORY_USER: ${{ secrets.AEM_CLOUD_ARTIFACTORY_USER }}
+          AEM_CLOUD_ARTIFACTORY_API_KEY: ${{ secrets.AEM_CLOUD_ARTIFACTORY_API_KEY }}
+          JAVA_HOME: ${{ env.JAVA_HOME }}
+        run: tools/verify.sh
+
+      # The golden is only meaningful if it matches a fresh build. verify.sh
+      # already fails on drift, but this makes an accidentally committed
+      # regenerated-but-stale golden visible as a dirty tree.
+      - name: Fail if the run modified tracked files
+        run: git diff --exit-code
