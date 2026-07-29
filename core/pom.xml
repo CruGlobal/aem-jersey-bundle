@@ -80,11 +80,6 @@
             <artifactId>jersey-client</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-server</artifactId>
-        </dependency>
-
         <!-- HK2 Dependencies -->
         <dependency>
             <groupId>org.glassfish.hk2</groupId>
@@ -99,6 +94,11 @@
         <dependency>
             <groupId>org.glassfish.hk2</groupId>
             <artifactId>osgi-resource-locator</artifactId>
+        </dependency>
+
+       <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
         </dependency>
 
         <!-- Other Dependencies -->
