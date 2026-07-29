@@ -18,7 +18,12 @@ javax.ws.rs:javax.ws.rs-api - 2.1
 
 ## Update version
 
-Under `ui.apps` edit pom.xml dependencies. 
+Dependency versions are managed in the root `pom.xml` — the `jersey.version` and
+`hk2.version` properties, and the `<dependencyManagement>` block below them.
+(`ui.apps/pom.xml` declares no dependency versions of its own.)
+
+Any dependency change alters what is embedded in the bundle, so it will change
+the golden fingerprint — see *Verifying a change*.
 
 ## How to build
 
