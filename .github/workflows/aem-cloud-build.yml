@@ -9,6 +9,8 @@ on:
 jobs:
   aem-build:
     uses: CruGlobal/.github/.github/workflows/aem-cloud-build.yml@v1
+    with:
+        java-version: '21'
     secrets:
         aem-cloud-artifactory-user: ${{ secrets.AEM_CLOUD_ARTIFACTORY_USER }}
         aem-cloud-artifactory-api-key: ${{ secrets.AEM_CLOUD_ARTIFACTORY_API_KEY }}
