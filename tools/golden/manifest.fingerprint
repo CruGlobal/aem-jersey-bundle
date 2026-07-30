@@ -1,0 +1,89 @@
+Bundle-ClassPath[00]: .
+Bundle-ClassPath[01]: jersey-common-2.25.1.jar
+Bundle-ClassPath[02]: javax.inject-2.5.0-b32.jar
+Bundle-ClassPath[03]: hk2-locator-2.5.0-b32.jar
+Bundle-ClassPath[04]: jersey-guava-2.25.1.jar
+Bundle-ClassPath[05]: jersey-client-2.25.1.jar
+Bundle-ClassPath[06]: hk2-utils-2.5.0.jar
+Bundle-ClassPath[07]: jakarta.annotation-api-1.3.4.jar
+Bundle-ClassPath[08]: jakarta.inject-2.5.0.jar
+Bundle-ClassPath[09]: hk2-api-2.5.0.jar
+Bundle-ClassPath[10]: aopalliance-repackaged-2.5.0.jar
+Bundle-ClassPath[11]: osgi-resource-locator-1.0.1.jar
+Bundle-ClassPath[12]: javassist-3.30.2-GA.jar
+Bundle-ClassPath[13]: javax.annotation-api-1.3.2.jar
+Bundle-ClassPath[14]: javax.ws.rs-api-2.1.jar
+Bundle-Description: This bundle wraps the jersey dependencies
+Bundle-ManifestVersion: 2
+Bundle-Name: jersey-bundle - Core
+Bundle-SymbolicName: cru-jersey-bundle
+Embed-Dependency: *;scope=compile|runtime
+Embed-Transitive: true
+Embedded-Artifacts[00]: jersey-common-2.25.1.jar;g="org.glassfish.jersey.core";a="jersey-common";v="2.25.1"
+Embedded-Artifacts[01]: javax.inject-2.5.0-b32.jar;g="org.glassfish.hk2.external";a="javax.inject";v="2.5.0-b32"
+Embedded-Artifacts[02]: hk2-locator-2.5.0-b32.jar;g="org.glassfish.hk2";a="hk2-locator";v="2.5.0-b32"
+Embedded-Artifacts[03]: jersey-guava-2.25.1.jar;g="org.glassfish.jersey.bundles.repackaged";a="jersey-guava";v="2.25.1"
+Embedded-Artifacts[04]: jersey-client-2.25.1.jar;g="org.glassfish.jersey.core";a="jersey-client";v="2.25.1"
+Embedded-Artifacts[05]: hk2-utils-2.5.0.jar;g="org.glassfish.hk2";a="hk2-utils";v="2.5.0"
+Embedded-Artifacts[06]: jakarta.annotation-api-1.3.4.jar;g="jakarta.annotation";a="jakarta.annotation-api";v="1.3.4"
+Embedded-Artifacts[07]: jakarta.inject-2.5.0.jar;g="org.glassfish.hk2.external";a="jakarta.inject";v="2.5.0"
+Embedded-Artifacts[08]: hk2-api-2.5.0.jar;g="org.glassfish.hk2";a="hk2-api";v="2.5.0"
+Embedded-Artifacts[09]: aopalliance-repackaged-2.5.0.jar;g="org.glassfish.hk2.external";a="aopalliance-repackaged";v="2.5.0"
+Embedded-Artifacts[10]: osgi-resource-locator-1.0.1.jar;g="org.glassfish.hk2";a="osgi-resource-locator";v="1.0.1"
+Embedded-Artifacts[11]: javassist-3.30.2-GA.jar;g="org.javassist";a="javassist";v="3.30.2-GA"
+Embedded-Artifacts[12]: javax.annotation-api-1.3.2.jar;g="javax.annotation";a="javax.annotation-api";v="1.3.2"
+Embedded-Artifacts[13]: javax.ws.rs-api-2.1.jar;g="javax.ws.rs";a="javax.ws.rs-api";v="2.1"
+Export-Package: javax.ws.rs.client;version="2.1.0";uses:="javax.net.ssl,javax.ws.rs,javax.ws.rs.core"
+Export-Package: javax.ws.rs.core;version="2.1.0";uses:="javax.ws.rs,javax.xml.namespace"
+Export-Package: javax.ws.rs.ext;version="2.1.0";uses:="javax.ws.rs,javax.ws.rs.core"
+Export-Package: javax.ws.rs;version="2.1.0";uses:="javax.ws.rs.core"
+Export-Package: jersey.repackaged.com.google.common.base;version="2.25.1"
+Export-Package: jersey.repackaged.com.google.common.collect;version="2.25.1";uses:="jersey.repackaged.com.google.common.base"
+Export-Package: org.glassfish.hk2.api.messaging;version="2.5.0";uses:="org.glassfish.hk2.api"
+Export-Package: org.glassfish.hk2.api;version="2.5.0";uses:="org.glassfish.hk2.extension,org.glassfish.hk2.utilities"
+Export-Package: org.glassfish.hk2.extension;version="2.5.0";uses:="org.glassfish.hk2.api"
+Export-Package: org.glassfish.hk2.internal;uses:="org.glassfish.hk2.api,org.glassfish.hk2.extension,org.glassfish.hk2.utilities";version="@PROJECT_VERSION@"
+Export-Package: org.glassfish.hk2.osgiresourcelocator;version="1.0.1"
+Export-Package: org.glassfish.hk2.utilities.binding;version="2.5.0";uses:="org.glassfish.hk2.api,org.glassfish.hk2.utilities"
+Export-Package: org.glassfish.hk2.utilities.cache.internal;uses:="org.glassfish.hk2.utilities.cache";version="@PROJECT_VERSION@"
+Export-Package: org.glassfish.hk2.utilities.cache;version="2.5.0"
+Export-Package: org.glassfish.hk2.utilities.general.internal;uses:="org.glassfish.hk2.utilities.cache,org.glassfish.hk2.utilities.general";version="@PROJECT_VERSION@"
+Export-Package: org.glassfish.hk2.utilities.general;version="2.5.0";uses:="javax.xml.namespace,javax.xml.stream,org.glassfish.hk2.utilities.cache"
+Export-Package: org.glassfish.hk2.utilities.reflection.internal;version="2.5.0";uses:="org.glassfish.hk2.utilities.reflection"
+Export-Package: org.glassfish.hk2.utilities.reflection;version="2.5.0"
+Export-Package: org.glassfish.hk2.utilities;version="2.5.0";uses:="org.glassfish.hk2.api,org.glassfish.hk2.utilities.binding"
+Export-Package: org.glassfish.jersey.client.authentication;version="2.25.1";uses:="javax.ws.rs,javax.ws.rs.client,javax.ws.rs.core"
+Export-Package: org.glassfish.jersey.client.filter;version="2.25.1";uses:="javax.ws.rs.client,javax.ws.rs.core"
+Export-Package: org.glassfish.jersey.client.spi;version="2.25.1";uses:="javax.net.ssl,javax.ws.rs.client,javax.ws.rs.core,org.glassfish.jersey.client"
+Export-Package: org.glassfish.jersey.client;version="2.25.1";uses:="javax.net.ssl,javax.ws.rs,javax.ws.rs.client,javax.ws.rs.core,javax.ws.rs.ext,jersey.repackaged.com.google.common.base,org.glassfish.hk2.api,org.glassfish.jersey.client.spi"
+Export-Package: org.jvnet.hk2.component;version="2.5.0"
+Import-Package: javax.activation
+Import-Package: javax.net.ssl;version="0.0.0"
+Import-Package: javax.xml.bind;version="0.0.0"
+Import-Package: javax.xml.namespace;version="0.0.0"
+Import-Package: javax.xml.parsers;version="0.0.0"
+Import-Package: javax.xml.stream;version="1.0.0"
+Import-Package: javax.xml.transform.dom;version="0.0.0"
+Import-Package: javax.xml.transform.sax;version="0.0.0"
+Import-Package: javax.xml.transform.stream;version="0.0.0"
+Import-Package: javax.xml.transform;version="0.0.0"
+Import-Package: org.w3c.dom
+Import-Package: org.xml.sax
+Import-Package: org.xml.sax.ext
+Import-Package: org.xml.sax.helpers
+Manifest-Version: 1.0
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Embedded-Sha256: aopalliance-repackaged-2.5.0.jar 1dd908b2ce957729be6b56aed08bcdec490335f7dee71f6411f3ef6b667daf8e
+Embedded-Sha256: hk2-api-2.5.0.jar 068bc705c590abefe3af3b922051fb26350c5b26518e5cdf75f8410c0dc29499
+Embedded-Sha256: hk2-locator-2.5.0-b32.jar 27cacf80e8c088cc50f73b56344b779bdb7418e590a037659ab66b2b0cd9c492
+Embedded-Sha256: hk2-utils-2.5.0.jar 56f4ff6384b04184ea301e925af1d700c3abe1ae1403994e012b6747429c3a57
+Embedded-Sha256: jakarta.annotation-api-1.3.4.jar e65d0194ca63c73d11fcd0a73325e762d905aafb51c90cdb98a5a5968367564a
+Embedded-Sha256: jakarta.inject-2.5.0.jar e640f71216bc81929d8cb02db5d39e80924e313758e24840c9f3536bade6b4f4
+Embedded-Sha256: javassist-3.30.2-GA.jar eba37290994b5e4868f3af98ff113f6244a6b099385d9ad46881307d3cb01aaf
+Embedded-Sha256: javax.annotation-api-1.3.2.jar e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b
+Embedded-Sha256: javax.inject-2.5.0-b32.jar 437c92cf50a0efa6b501b8939b5b92ede7cfe4455cf06b68ec69d1b21ab921ed
+Embedded-Sha256: javax.ws.rs-api-2.1.jar 1a4295889416c6972addcd425dfeeee6e6ede110e8b2dc8b49044e9b400ad5db
+Embedded-Sha256: jersey-client-2.25.1.jar 10671e430dc7c841eb0bc54c9f3e265dbb60e9f85efaad71d1e39807057e405c
+Embedded-Sha256: jersey-common-2.25.1.jar 4df653fc69d5feec7ad1928018f964e12a7513bcea7b5e8b1aa4b1f5a815815f
+Embedded-Sha256: jersey-guava-2.25.1.jar 8a88a8ebae65cb4d77830b40f681bf742b55ec62e7a44cf91b8577a9396b9f81
+Embedded-Sha256: osgi-resource-locator-1.0.1.jar 775003be577e8806f51b6e442be1033d83be2cb2207227b349be0bf16e6c0843
